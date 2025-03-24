@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="C:\Users\marliyana\OneDrive\Desktop\portfolio\assets\icon.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <title>Munirah's portfolio</title>
+    <style>
+          body,html {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header{
+            position: fixed;
+            top: 0;
+            left: 0;
+            margin-bottom: 70px;
+            width: 1350px;
+            padding: 50px 100px;
+            background-color: rgba(50, 5, 5, 0.1);
+            display: flex;
+            justify-content: space-between;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+            align-items: center;
+            z-index: 100;
+            text-decoration: none;
+        }
+
+        .section1 {
+            background-image: url('https://github.com/MunirahSofea/portfolio/blob/main/Untitled%20design.jpg?raw=true') ;
+            background-size: cover;
+            background-color: rgba(0, 0, 0, 0.1);
+            background-blend-mode: overlay;
+            height: 120vh;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+        }
+
+        .hams {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100vh;
+            z-index: 10;
+        }
+
+        .hamster {
+            position: absolute;
+            width: 100px; /* Adjust size as needed */
+            opacity: 0;
+            animation: fly 6s ease-in-out infinite;
+        }
+
+        .hams1 {
+            top: 10%;
+            left: 20%;
+            transform: rotate(15deg);
+            animation: fly1 6s ease-in-out infinite;
+        }
+
+        .hams2 {
+            top: 30%;
+            left: 50%;
+            transform: rotate(-10deg);
+            animation: fly2 6s ease-in-out infinite;
+        }
+
+        .hams3 {
+            top: 60%;
+            left: 70%;
+            transform: rotate(25deg);
+            animation: fly3 6s ease-in-out infinite;
+        }
+
+        .hams4 {
+            top: 80%;
+            left: 40%;
+            transform: rotate(-20deg);
+            animation: fly4 6s ease-in-out infinite;
+        }
+
+        @keyframes fly1 {
+        0% { transform: translateY(0) rotate(15deg) scale(0.8); opacity: 1; }
+        50% { transform: translateY(-30px) rotate(20deg) scale(1); opacity: 1; }
+        100% { transform: translateY(-60px) rotate(10deg) scale(0.8); opacity: 0; }
+        }
+
+        @keyframes fly2 {
+        0% { transform: translateY(0) rotate(-10deg) scale(0.8); opacity: 1; }
+        50% { transform: translateY(-40px) rotate(-15deg) scale(1); opacity: 1; }
+        100% { transform: translateY(-80px) rotate(-5deg) scale(0.8); opacity: 0; }
+        }
+
+        @keyframes fly3 {
+        0% { transform: translateY(0) rotate(25deg) scale(0.8); opacity: 1; }
+        50% { transform: translateY(-50px) rotate(30deg) scale(1); opacity: 1; }
+        100% { transform: translateY(-100px) rotate(20deg) scale(0.8); opacity: 0; }
+        }
+
+        @keyframes fly4 {
+        0% { transform: translateY(0) rotate(-20deg) scale(0.8); opacity: 1; }
+        50% { transform: translateY(-20px) rotate(-25deg) scale(1); opacity: 1; }
+        100% { transform: translateY(-50px) rotate(-15deg) scale(0.8); opacity: 0; }
+        }
+
+        .inb1 {
+            position: relative;
+            top: 0;
+            left: 0;
+            width: 100%;
+            pointer-events: none;
+            z-index: 10; 
+            height: 100px;
+        }
+
+        .horse {
+            position: absolute;
+            width: 1300px;
+            opacity: 1;
+            
+        }
+
+        /* Keyframes for wave effect */
+        @keyframes wave {
+        0% {
+            transform: translateX(30px);
+        }
+        25% {
+            transform: translateX(-50px);
+        }
+        50% {
+            transform: translateX(30px);
+        }
+        75% {
+            transform: translateX(30px);
+        }
+        100% {
+            transform: translateX(30px);
+        }
+        }
+
+        .section2 {
+            background-image: url('https://github.com/MunirahSofea/portfolio/blob/main/BACKGROUND%20(1).jpg?raw=true') ;
+            background-size: cover;
+            background-color: rgba(0, 0, 0, 0.1);
+            background-blend-mode: overlay;
+            height: 120vh;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: auto;
+        }
+
+        .section3 {
+            background-image: url('https://github.com/MunirahSofea/portfolio/blob/main/BACKGROUND%20(2).jpg?raw=true') ;
+            background-size: cover;
+            background-color: rgba(0, 0, 0, 0.1);
+            background-blend-mode: overlay;
+            height: 156vh;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: auto;
+        }
+
+        .section4 {
+            background-image: url('https://github.com/MunirahSofea/portfolio/blob/main/BACKGROUND%20(3).jpg?raw=true') ;
+            background-size: cover;
+            background-color: rgba(0, 0, 0, 0.1);
+            background-blend-mode: overlay;
+            height: 123vh;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: auto;
+        }
+
+        ::-webkit-scrollbar{
+        width: 15px;
+        }
+
+        ::-webkit-scrollbar-track{
+            box-shadow: inset 0 0 5px #f0ebd4; 
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb{
+            background: #bbb47e;
+            border-radius: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #c72c43; 
+        }
+
+        .menu {
+            position: fixed;
+            top: 40px;
+            left: 40px;
+            z-index: 1000;
+        }
+
+        .menu-toggle {
+            display: none;
+        }
+
+        .menu-button {
+            display: inline-block;
+            background-color: #3c4a2e;
+            color: white;
+            padding: 30px 35px;
+            font-size: 25px;
+            border-radius: 60px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .items {
+            position: absolute;
+            top: 100px;
+            left: 0px;
+            background-color: #f0ebd4;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 5px;
+            overflow: hidden;
+            transform: scale(0);
+            transform-origin: top left;
+            transition: transform 0.3s ease-in-out;
+            font-size: 18px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+        }
+
+        .items a {
+            display: block;
+            padding: 20px 25px;
+            text-decoration: none;
+            color: #333;
+            border-bottom: 1px solid #eee;
+        }
+
+        .items a:hover {
+            background-color: #3c4a2e;
+            color: #f0ebd4;
+        }
+
+        .menu-toggle:checked ~ .items {
+            transform: scale(1);
+        }
+
+        h1 {
+            font-size: 85px;
+            color:#968343;
+            cursor: pointer;
+            font-family: "Rye", serif;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            padding-top: 30px;
+            margin-top: 150px;
+            text-shadow:  3px 3px rgba(0, 0, 0, 0.2);
+        }
+
+        h1:hover {
+            transform:scale(1.05);
+            color: #4a4735;
+            text-shadow:  4px 4px #a3a085;
+        }
+
+        h2 {
+            font-size: 80px;
+            color:#f4e587;
+            cursor: pointer;
+            font-family: "Rye", serif;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            margin-top: -60px;
+            text-shadow:  3px 3px rgba(0, 0, 0, 0.1);
+        }
+
+        h2:hover {
+            transform: scale(1.05);
+            color: #b4ad32;
+            text-shadow:  4px 4px rgba(255, 0, 0, 0.2);
+        }
+
+        .container{
+            max-width: 800px;
+            border-radius: 15px;
+            margin-top: -250px;
+            margin-bottom: 350px;
+        }
+
+        .button-container {
+            max-width: 800px;
+            display: flex;
+            gap: 50px;
+        }
+
+        .button1{
+            max-width: 500px;
+            border-radius: 15px;
+            margin: 400px 0px 10px 180px;
+            display: flex;
+            align-items: center;
+            cursor: default;
+            background-color: #3c4a2e;
+            box-shadow: 0 5px 10px rgba(50, 104, 1, 0.2);
+        }
+
+        .button2{
+            max-width: 700px;
+            border-radius: 15px;
+            margin: 30px 0px 100px 180px;
+            display: flex;
+            align-items: center;
+            padding: 0px 5px;
+            cursor: default;
+            background-color: #f0ebd4;
+            box-shadow: 0 5px 10px rgba(50, 104, 1, 0.2);
+            border: 10px solid transparent;
+            opacity: 0.8;
+            /*border-image: url('https://raw.githubusercontent.com/MarliyanaSuraya/Marli-s-Portfolio/refs/heads/main/assets/section2.png') 30 round ; */
+        }
+
+        .button3 {
+            max-width: 300px;
+            border-radius: 15px;
+            margin: 400px 0px 10px 0px;
+            display: flex;
+            align-items: center;
+            cursor: default;
+            background-color: #f0ebd4;
+            box-shadow: 0 5px 10px rgba(50, 104, 1, 0.2);
+        }
+
+        .button3:hover{
+            transform: scale(1.10);
+            background: linear-gradient(to right, lightsalmon 0%, violet 100%);
+            box-shadow: 0 5px 10px rgba(255, 0, 0, 0.2);
+        }
+
+        h3 {
+            font-size: 40px;
+            font-family: 'Poppins', sans-serif;
+            color: #f0ebd4;
+            margin: 15px 80px 15px 80px;
+        }
+
+        h4 {
+            font-size: 20px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: #3c4a2e;
+            margin: 20px 40px 20px 40px; 
+        }
+
+        h4:hover{
+            transform: scale(1.10);
+            color: #f0ebd4;
+        }
+
+        h5{
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 420;
+            color: #3c4a2e;
+            align-items: left;
+            justify-content: left;
+            display: flex;
+            text-align: justify;
+            margin: 40px 40px 40px 40px;
+        }
+
+        h6 {
+            font-size: 40px;
+            font-family: 'Poppins', sans-serif;
+            color: #f0ebd4;
+            margin: 15px 80px 15px 80px;
+        }
+
+        h7 { 
+            font-size: 23px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            color: #4d021a;
+            align-items: left;
+            justify-content: left;
+            display: flex;
+            margin: 24px 24px 12px 24px;
+        }
+
+        h8 { 
+            font-size: 16px;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 500;
+            color: #59031ea7;
+            align-items: left;
+            justify-content: left;
+            text-align: justify;
+            display: flex;
+            margin: 0px 30px 24px 30px;
+        }
+
+        .title3{
+            background-color: #3c4a2e;
+            box-shadow: 0 5px 10px rgba(50, 104, 1, 0.2);
+            margin: 80px 0px 0px 180px;
+            border-radius: 15px;
+            display: flex;
+            max-width: 400px;
+        }
+
+        .container2{
+            max-width: 1100px;
+            border-radius: 15px;
+            margin-top: 50px;
+            margin-bottom: 350px;
+            margin-left: 200px;
+            gap: 70px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .container3{
+            max-width: 1100px;
+            border-radius: 15px;
+            margin-top: 0px;
+            margin-bottom: 50px;
+            margin-left: 0px;
+            gap: 70px;
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        .pro {
+            height: 150px;
+            margin: 10px -20px -20px -20px;
+        }
+        
+
+        .project1{
+            width: 320px;
+            box-shadow: 0 5px 10px rgba(50, 104, 1, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            background: linear-gradient(125deg, rgb(171, 174, 186) 0%, rgb(214, 207, 201) 50%, rgb(228, 237, 224) 100%);
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            transform-origin: bottom;
+        }
+
+        .project1:hover {
+            animation-name: bounce;
+            animation-timing-function: ease;
+        }
+        @keyframes bounce {
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(-50px); }
+        100% { transform: translateY(0); }
+        }
+
+        .pro1-link{
+            text-decoration: none;
+        }
+
+        .project2{
+            width: 320px;
+            box-shadow: 0 5px 10px rgba(50, 104, 1, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            background: linear-gradient(125deg,  rgb(171, 174, 186) 0%, rgb(214, 207, 201) 50%, rgb(228, 237, 224) 100%);
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            transform-origin: bottom;
+        }
+
+        .project2:hover {
+            animation-name: bounce;
+            animation-timing-function: ease;
+        }
+        @keyframes bounce {
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(-50px); }
+        100% { transform: translateY(0); }
+        }
+
+        .project3{
+            width: 320px;
+            box-shadow: 0 5px 10px rgba(50, 104, 1, 0.2);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            background: linear-gradient(125deg, rgb(171, 174, 186) 0%, rgb(214, 207, 201) 50%, rgb(228, 237, 224) 100%);
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            transform-origin: bottom;
+        }
+
+        .project3:hover {
+            animation-name: bounce;
+            animation-timing-function: ease;
+        }
+        @keyframes bounce {
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(-50px); }
+        100% { transform: translateY(0); }
+        }
+
+        .project4{
+            width: 320px;
+            box-shadow: 0 4px 10px rgba(102, 102, 153, 0.4);
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            border-radius: 15px;
+            background: linear-gradient(125deg, rgb(171, 174, 186) 0%, rgb(214, 207, 201) 50%, rgb(228, 237, 224) 100%);
+            animation-duration: 2s;
+            animation-iteration-count: infinite;
+            transform-origin: bottom;
+        }
+
+        .project4:hover {
+            animation-name: bounce;
+            animation-timing-function: ease;
+        }
+        @keyframes bounce {
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(-50px); }
+        100% { transform: translateY(0); }
+        }
+        
+        .line {
+            display: block;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        .material-symbols-outlined{
+            color: #c72c43;
+            margin: 40px 0px 50px 180px;
+            max-width: 400px;
+        }
+
+    </style>
+</head>
+
+<body>
+
+    <div class="menu">
+        <input type="checkbox" id="menu-toggle" class="menu-toggle">
+        <label for="menu-toggle" class="menu-button">
+            ☰
+        </label>
+        <div class="items">
+            <a class="active" href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+    </div>
+
+    <div class="section1">
+        <section id="home">
+            <h1 id="title">Nice to meet you!</h1>
+
+            <script>
+                ScrollReveal().reveal('#title',{delay:200, origin:top, easing:'ease-in-out'});
+            </script>
+            
+            <h2 id="typewriter">I am _<span id="name"></span></h2>
+
+            <script>
+                const words = ["Munirah Sofea", "an Assistant Manager", "a Product Specialist"];
+                let wordIndex = 0;
+                let charIndex = 0;
+                let typingSpeed = 100; // Speed of typing (ms)
+                let erasingSpeed = 50; // Speed of erasing (ms)
+                let delayBetweenWords = 1000; // Delay before erasing (ms)
+
+                function typeWriter() {
+                    let nameSpan = document.getElementById("name");
+
+                    if (charIndex < words[wordIndex].length) {
+                        nameSpan.textContent += words[wordIndex][charIndex];
+                        charIndex++;
+                        setTimeout(typeWriter, typingSpeed);
+                    } else {
+                        setTimeout(eraseText, delayBetweenWords);
+                    }
+                }
+
+                function eraseText() {
+                    let nameSpan = document.getElementById("name");
+
+                    if (charIndex > 0) {
+                        nameSpan.textContent = words[wordIndex].substring(0, charIndex - 1);
+                        charIndex--;
+                        setTimeout(eraseText, erasingSpeed);
+                    } else {
+                        wordIndex = (wordIndex + 1) % words.length; // Move to the next word
+                        setTimeout(typeWriter, typingSpeed);
+                    }
+                }
+
+                typeWriter(); // Start the effect
+            </script>
+            <script>
+                ScrollReveal().reveal('#title2',{delay:200, origin:top, easing:'ease-in-out'});
+            </script>
+        </section>
+    </div>
+
+    <div class="hams">
+        <img src='https://github.com/MunirahSofea/portfolio/blob/main/star.png?raw=true' class="hamster hams1">
+        <img src='https://github.com/MunirahSofea/portfolio/blob/main/star.png?raw=true' class="hamster hams2">
+        <img src='https://github.com/MunirahSofea/portfolio/blob/main/star.png?raw=true' class="hamster hams3">
+        <img src='https://github.com/MunirahSofea/portfolio/blob/main/star.png?raw=true' class="hamster hams4">
+    </div>
+
+    <div class="section2">
+        <section id="about">
+            <div class="container">
+                <div class="button-container">
+                    <div class="button1">
+                        <h3>About Me</h3>
+                        <a href="https://github.com/MunirahSofea/portfolio/blob/main/resume.jpg?raw=true" class="pro1-link">
+                    </div>
+                    <div class="button3">
+                        <h4>My Resume</h4>
+                    </div>
+                </div>
+                <div class="button2">
+                    <h5>
+                            <span class="line">Hello! Thank you for coming to my portfolio! <br><br>
+                                My name is Munirah Sofea
+                                <br><br>
+                                I am an ambitious and highly motivated individual with a strong passion especially in business management.Through my academic studies and any 
+                                relevant working experience, projects, or extracurricular activities, I have gained skills in problem-solving, teamwork, communication and analytical 
+                                thinking where I developed a solid foundation in business strategy, operations, and leadership. I am eager to apply this knowledge in a professional 
+                                setting and contribute to projects. I am excited about the opportunity to learn and grow within your organization and would welcome the chance to 
+                                discuss how my enthusiasm, dedication, and adaptability make me a strong candidate for this role. I’m eager to continue expanding my skills in management 
+                                while exploring new tools and techniques. Let’s connect and collaborate on projects!</span>
+                        </h5>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div class="section3">
+        <section id="projects">
+            <div class="title3">
+                <h6>My Projects</h6>
+            </div>
+            <div class="container2">
+                <a href="final year project.html" class="pro1-link">
+                    <div class="project1">
+                        <img src="https://raw.githubusercontent.com/MarliyanaSuraya/Marli-s-Portfolio/refs/heads/main/assets/pro1.png" class="pro">
+                        <h7>Projects</h7>
+                        <h8>Various projects that has been done from my university days until today.</h8>
+                    </div>
+                <a href="Working experience.html" class="pro1-link">
+                    <div class="project2">
+                        <img src="https://github.com/MunirahSofea/portfolio/blob/main/work-experience-removebg-preview.png?raw=true" class="pro">
+                        <h7>Working Experience</h7>
+                        <h8>A dynamic journey learned adapting to challenges and continuously learning from both successes and setbacks.</h8>
+                    </div>
+            <div class="container3">
+                <a href="Skills and Certificates.html" class="pro1-link">
+                    <div class="project3">
+                        <img src="https://github.com/MunirahSofea/portfolio/blob/main/skill.jpg?raw=true" class="pro">
+                        <h7>Skills And Certificates</h7>
+                        <h8>A blend of technical expertise and continuous personal growth.</h8>
+                    </div>
+                <a href="https://github.com/MunirahSofea/portfolio/blob/main/education%20background.jpg?raw=true" class="pro1-link">
+                    <div class="project4">
+                        <img src="https://github.com/MunirahSofea/portfolio/blob/main/education%20bground.png?raw=true" class="pro">
+                        <h7>Education Background</h7>
+                        <h8>A transformative journey shaping me into a well-rounded professional ready to tackle complex challenges.</h8>
+                    </div>
+                </div>
+            </div>
+            </a>
+        </section>
+    </div>
+
+    <div class="inb3"></div>
+
+    <div class="section4">
+        <section id="contact">
+            <div class="title3">
+                <h6>Contact Me</h6>
+            </div>
+                <div>
+                </br>
+                    <h4>Phone Number: +6013-6313499</h4>
+                </br>
+                    <h4><a href="https://wa.me/60136313499" target="_blank">Click to message on WhatsApp</a></h4>
+                </br>
+                    <h4>email: munirah.sofea@gmail.com</h4>
+                    <h4><a href="mailto:munirah.sofea@gmail.com?subject=Subject%20Here&body=Message%20Here">Send Email</a></h4>
+                </div>
+        </section>
+    </div>
+</body>
+</html>

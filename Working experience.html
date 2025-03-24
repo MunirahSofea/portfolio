@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <title>Working Experience</title>
+
+  <script>
+    function openTab(evt, tabContent) {
+    var i, tabCon, tab;
+
+    tabCon = document.getElementsByClassName("tabCon");
+    for (i = 0; i < tabCon.length; i++) {
+        tabCon[i].style.display = "none";
+    }
+
+    tab = document.getElementsByClassName("tab");
+    for (i = 0; i < tab.length; i++) {
+        tab[i].className = tab[i].className.replace(" active", "");
+    }
+
+    document.getElementById(tabContent).style.display = "block";
+    evt.currentTarget.className += " active";
+    }
+
+    function setDefaultTab() {
+    document.getElementById("Overview").style.display = "block";
+    const defaultTab = document.querySelector(".tab");
+    if (defaultTab) {
+        defaultTab.className += " active";
+    }
+    }
+
+    window.onload = setDefaultTab;
+
+</script>
+
+  <style>
+
+    body,html{
+        background: linear-gradient(to right, rgb(214, 191, 18) 0%, rgb(237, 137, 30) 100%);
+    }
+
+    .container{
+        display: flex; 
+        gap: 30px;
+        justify-content: space-between; 
+        padding: 20px;
+        max-width: 1200px;
+    }
+
+    .column1{
+        width: 400px;
+    }
+
+    .icon1{
+      width: 300px;
+      margin: 30px 0 0 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(125deg, rgb(190, 201, 229) 0%, rgb(223, 202, 183) 50%, rgb(202, 226, 195) 100%);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+      padding: 10px 0px 10px 0px;
+    }
+
+    .pro1{
+      height: 200px;
+      display: flex
+    }
+
+    .tabs button{
+        width: 300px;
+        margin: 30px 0 0 30px;
+        height: 50px;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        background-color: #d5af87;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        padding: 5px 0px 5px 0px;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+
+    .tabs button:hover{
+        background-color: #d49947;
+        transform: scale(1.10);
+    }
+
+    .tabs button.active{
+        background-color: #d49947;
+    }
+
+    @keyframes bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-50px); }
+    100% { transform: translateY(0); }
+    }
+
+    .column2{
+        width: 1000px;
+    }
+
+    .tabCon{
+        display: none;
+    }
+
+    .box-title{
+        width: 800px;
+        background-color: #e2871e;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+        padding: 5px 0px 5px 30px;
+        margin: 30px 0 0 30px;
+        box-sizing: border-box;
+    }
+
+    .content{
+        width: 800px;
+        height: 495px;
+        background-color: #f9d860;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+        padding: 30px 70px 30px 40px;
+        margin: 35px 0 0 30px;
+        box-sizing: border-box;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    
+    h1{
+        font-size: 28px;
+        font-family:'Poppins', sans-serif;
+    }
+
+    h2{
+        font-size: 25px;
+        font-family:'Poppins', sans-serif;
+    }
+
+    h3{
+        font-size: 18px;
+        font-weight: 600;
+        font-family:'Poppins', sans-serif;
+        margin-bottom: -20px;
+        color: #481010;
+        text-align: justify;
+    }
+
+    h4{
+        font-size: 16px;
+        font-weight: 400;
+        font-family:'Poppins', sans-serif;
+        color: #481010;
+        text-align: justify;
+        margin-bottom: 18px;
+    }
+
+
+  </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="column1">
+            <div class="icon1">
+                <img src="https://github.com/MunirahSofea/portfolio/blob/main/work-experience-removebg-preview.png?raw=true" class="pro1" style="width: 300px; height: auto;">
+
+                <h1>Working Experience</h1>
+            </div>
+            <div class="tabs">
+                <button class="tab" onclick="openTab(event, 'Product Specialist')" data-title="Product Specialist">Product Specialist</button>
+                <button class="tab" onclick="openTab(event, 'Assistant Manager')" data-title="Assistant Manager">Assistant Manager</button>
+                <button class="tab" onclick="openTab(event, 'Tuition Tutor')" data-title="Tuition Tutor">Tuition Tutor</button>
+            </div>
+        </div>
+
+        <div class="column2">
+            <div id="Product Specialist" class="tabCon">
+                <div class="box-title">
+                    <h2>KGC Resources SDN BHD</h2>
+                </div>
+                <div class="content">
+                    <h3> Sales </h3>
+                    <h4>&emsp; • &ensp; In-charge of UKM, UM, UiTM and government e-perolehan / tender.
+                    </br>
+                        &emsp; • &ensp; LIn-charge of PO, DO and invoice.
+                    </br>
+                        &emsp; • &ensp; In-charge and participate in bids and projects which involve equipments that cost millions ringgit</h4>
+                    </h4>
+                    <h3> Technical </h3>
+                    <h4>&emsp; • &ensp; Product commissioning to customer.
+                    </br>
+                        &emsp; • &ensp; Checking and fix troubleshooting of customer's product.
+                    </br>
+                        &emsp; • &ensp; Liase with existing and new customers for product introduction and issues.
+                    </br>
+                        &emsp; • &ensp; Handling the maintenance and quality checking of the product.</h4>
+                    <h3> Others </h3>
+                    <h4>&emsp; • &ensp; Warehouse products storage management and audit.
+                    </br>
+                        &emsp; • &ensp; Handling product transportation via Lalamove, courier and self-transport.
+                    </br>
+                        &emsp; • &ensp; Drawing AutoCad for project and product</h4>
+                </div>
+            </div>
+            <div id="Assistant Manager" class="tabCon">
+                <div class="box-title">
+                    <h2>Universiti Tunku Abdul Rahman Sungai Long</h2>
+                </div>
+                <div class="content">
+                    <h3> Purchasing </h3>
+                    <h4>&emsp; • &ensp; Handling Purchase Request, Purchase Order, Delivery Order and Invoice.
+                    </br>
+                        &emsp; • &ensp; Handling items purchasing up to RM 50,000.00.
+                    </br>
+                        &emsp; • &ensp; Liase with suppliers for the budgeting and purchasing.
+                    </br>
+                        &emsp; • &ensp; Have connections up to 30 suppliers in various products category.
+                    </br> 
+                        &emsp; • &ensp; Manage and communicate with Finance Department for purchasing documentation.</h4>
+                    <h3> Technical </h3>
+                    <h4>&emsp; • &ensp; In-charge of documentations and safety management for EAC accredation for Chemical Engineering program.
+                    </br>
+                        &emsp; • &ensp; In-charge of Safety Management for staff and students (OSHA) especially laboratory safety management.
+                    </br>
+                        &emsp; • &ensp; Handling monthly and yearly maintenance and audit (LEV/GEV, chemicals, assets inventory and etc.)
+                    </br>
+                        &emsp; • &ensp; Keep updated and implement on new safety and environment management policy by government.</h4>
+                    <h3> Others</h3>
+                    <h4>&emsp; • &ensp; One of the markers for Asian Physics Olympiad 2024.
+                    </br>
+                        &emsp; • &ensp; Do introduction of the university and demonstration to visitors.
+                    </br>
+                        &emsp; • &ensp; Participate in convocation management.
+                        </br>
+                        &emsp; • &ensp; Participate in OSHA, IT, First Aid and others training.
+                        </br>
+                        &emsp; • &ensp; Handling any require event or task given.</h4>
+                </div>
+            </div>
+            <div id="Tuition Tutor" class="tabCon">
+                <div class="box-title">
+                    <h2>MasterMath Kajang</h2>
+                </div>
+                <div class="content">
+                    <h4>
+                        &emsp; • &ensp; Teach Physics, Additional Mathematics, Mathematics, Biology, and Chemistry to Form 4 and Form 5 students.<br>
+                        &emsp; • &ensp; Teach other subjects that cannot be covered by other teachers, e.g., Science for Form 2 International School students.<br>
+                        &emsp; • &ensp; Conduct quizzes and mock exams every two weeks.</h4>
+                </div>
+            </div>            
+        </div>
+    </div>
+</body>
+</html>

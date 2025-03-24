@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="icon" type="image/x-icon" href="C:\Users\marliyana\OneDrive\Desktop\portfolio\assets\icon.png">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <title>Skills and Certificates</title>
+
+  <script>
+    function openTab(evt, tabContent) {
+    var i, tabCon, tab;
+
+    tabCon = document.getElementsByClassName("tabCon");
+    for (i = 0; i < tabCon.length; i++) {
+        tabCon[i].style.display = "none";
+    }
+
+    tab = document.getElementsByClassName("tab");
+    for (i = 0; i < tab.length; i++) {
+        tab[i].className = tab[i].className.replace(" active", "");
+    }
+
+    document.getElementById(tabContent).style.display = "block";
+    evt.currentTarget.className += " active";
+    }
+
+    function setDefaultTab() {
+    document.getElementById("Overview").style.display = "block";
+    const defaultTab = document.querySelector(".tab");
+    if (defaultTab) {
+        defaultTab.className += " active";
+    }
+    }
+
+    window.onload = setDefaultTab;
+
+</script>
+
+  <style>
+
+    body,html{
+        background: linear-gradient(to right, rgb(214, 191, 18) 0%, rgb(237, 137, 30) 100%);
+    }
+
+    .container{
+        display: flex; 
+        gap: 30px;
+        justify-content: space-between; 
+        padding: 20px;
+        max-width: 100px;
+    }
+
+    .column1{
+        width: 400px;
+    }
+
+    .icon1{
+      width: 300px;
+      margin: 30px 0 0 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(125deg, rgb(190, 201, 229) 0%, rgb(223, 202, 183) 50%, rgb(202, 226, 195) 100%);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+      padding: 10px 0px 10px 0px;
+    }
+
+    .pro1{
+      height: 125px;
+      padding: 10px 0px 0px 10px
+    }
+
+    .tabs button{
+        width: 300px;
+        margin: 30px 0 0 30px;
+        height: 50px;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        background-color: #d5af87;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        padding: 5px 0px 5px 0px;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+
+    .tabs button:hover{
+        background-color: #d49947;
+        transform: scale(1.10);
+    }
+
+    .tabs button.active{
+        background-color: #d49947;
+    }
+
+    @keyframes bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-50px); }
+    100% { transform: translateY(0); }
+    }
+
+    .column2{
+        width: 1000px;
+    }
+
+    .tabCon{
+        display: none;
+    }
+
+    .box-title{
+        width: 800px;
+        background-color: #e2871e;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+        padding: 5px 0px 5px 30px;
+        margin: 30px 0 0 30px;
+        box-sizing: border-box;
+    }
+
+    .content{
+        width: 800px;
+        height: 495px;
+        background-color: #f9d860;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+        padding: 30px 70px 30px 40px;
+        margin: 35px 0 0 30px;
+        box-sizing: border-box;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    
+    h1{
+        font-size: 25px;
+        padding: 10px 10px 10px 10px;
+        margin: 10px 0 0 60px;
+        font-family:'Poppins', sans-serif;
+    }
+
+    h2{
+        font-size: 25px;
+        font-family:'Poppins', sans-serif;
+    }
+
+    h3{
+        font-size: 18px;
+        font-weight: 600;
+        font-family:'Poppins', sans-serif;
+        margin-bottom: -20px;
+        color: #481010;
+        text-align: justify;
+    }
+
+    h4{
+        font-size: 16px;
+        font-weight: 400;
+        font-family:'Poppins', sans-serif;
+        color: #481010;
+        text-align: justify;
+        margin-bottom: 18px;
+    }
+
+    .pro2{
+            text-decoration: none;
+            height: 400px;
+            padding: 10px 0px 0px 10px
+        }
+
+    .pro3{
+            text-decoration: none;
+            height: 800px;
+            padding: 10px 0px 0px 10px
+        }
+
+  </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="column1">
+            <div class="icon1">
+                <img src="https://github.com/MunirahSofea/portfolio/blob/main/skill.jpg?raw=true" class="pro1">
+                <h1>Skills and Certificates</h1>
+            </div>
+            <div class="tabs">
+                <button class="tab" onclick="openTab(event, 'Project_Management')" data-title="Project_Management">Project Management</button>
+                <button class="tab" onclick="openTab(event, 'Microsoft')" data-title="Microsoft">Microsoft</button>
+                <button class="tab" onclick="openTab(event, 'Safety')" data-title="Safety">Safety</button>
+                <button class="tab" onclick="openTab(event, 'IT')" data-title="IT">IT</button>
+                <button class="tab" onclick="openTab(event, 'Leadership')" data-title="Leadership">Leadership</button>
+                <button class="tab" onclick="openTab(event, 'Coming_Soon')" data-title="Coming_Soon">Coming Soon</button>
+            </div>
+        </div>
+
+        <div class="column2">
+            <div id="Project_Management" class="tabCon">
+                <div class="box-title">
+                    <h2>Project Management</h2>
+                </div>
+                <div class="content">
+                    <img src="https://github.com/MunirahSofea/portfolio/blob/main/Project%20Management%20Fundamentals_page-0001.jpg?raw=true" class="pro2">
+                </div>
+            </div>
+            <div id="Microsoft" class="tabCon">
+                <div class="box-title">
+                    <h2>Microsoft</h2>
+                </div>
+                <div class="content">
+                    <img src="https://github.com/MunirahSofea/portfolio/blob/main/MS%20WORD_page-0001.jpg?raw=true" class="pro2">
+                    <img src="https://github.com/MunirahSofea/portfolio/blob/main/Work%20Smarter%20with%20Microsoft%20Excel_page-0001.jpg?raw=true" class="pro2">
+                    <img src="https://github.com/MunirahSofea/portfolio/blob/main/dashboard_page-0001.jpg?raw=true" class="pro3">
+                </div>
+            </div>
+            <div id="Safety" class="tabCon">
+                <div class="box-title">
+                    <h2>Safety</h2>
+                </div>
+                <div class="content">
+                    <img src="https://github.com/MunirahSofea/portfolio/blob/main/biorisk_page-0001.jpg?raw=true" class="pro3">
+                    <img src="https://github.com/MunirahSofea/portfolio/blob/main/hazard_page-0001.jpg?raw=true" class="pro3">
+                    <img src="https://github.com/MunirahSofea/portfolio/blob/main/osha_page-0001.jpg?raw=true" class="pro3">
+                </div>
+            </div>
+            <div id="IT" class="tabCon">
+                <div class="box-title">
+                    <h2>IT</h2>
+                </div>
+                <div class="content">
+                    <img src="https://github.com/MunirahSofea/portfolio/blob/main/python%20cert_page-0001.jpg?raw=true" class="pro2">
+                    <img src="https://github.com/MunirahSofea/portfolio/blob/main/Combating%20Terrorism%20Financing_page-0001.jpg?raw=true" class="pro3">
+                    <img src="https://github.com/MunirahSofea/portfolio/blob/main/Operational%20Analysis%20of%20Suspicious%20Transaction%20Reports_page-0001.jpg?raw=true" class="pro3">
+                    <img src="https://github.com/MunirahSofea/portfolio/blob/main/data%20analytics.png?raw=true" class="pro2">
+                </div>
+            </div>
+            <div id="Leadership" class="tabCon">
+                <div class="box-title">
+                    <h2>Leadership</h2>
+                </div>
+                <div class="content">
+                    <img src="https://github.com/MunirahSofea/portfolio/blob/main/Bendahari_page-0001.jpg?raw=true" class="pro3">
+                    <img src="https://github.com/MunirahSofea/portfolio/blob/main/annual%20dinner_page-0001.jpg?raw=true" class="pro2">
+                    <img src="https://github.com/MunirahSofea/portfolio/blob/main/event_page-0001.jpg?raw=true" class="pro2">
+                </div>
+            </div>
+            <div id="Coming_Soon" class="tabCon">
+                <div class="box-title">
+                    <h2>Coming Soon</h2>
+                </div>
+                <div class="content">
+                    <img src="https://github.com/MunirahSofea/portfolio/blob/main/lock_certificate.png?raw=true" class="pro2">
+                    <h4>&emsp; • &ensp; Introduction to Git and GitHub (Microsoft)
+                    </br>
+                        &emsp; • &ensp; Using Python to interact with the Operating System (Microsoft)
+                    </br>
+                        &emsp; • &ensp; Project Initiation: Strating a Successful Project (Google)
+                    </br>
+                        &emsp; • &ensp; IT Security: Defense against the digital dark arts (Google)
+                    </br> 
+                        &emsp; • &ensp; System Administration and IT Infrastructure Services (Google)
+                    </br>
+                        &emsp; • &ensp; Operating Systems and You: Becoming a Power User (Google)
+                    </br>
+                        &emsp; • &ensp; Technical Support Fundamentals (Google)
+                    </br>
+                        &emsp; • &ensp; Troubleshooting and Debugging (Google)
+                    </br>
+                        &emsp; • &ensp; Project Planning: Putting It All Together (Google)
+                    </br>
+                        &emsp; • &ensp; PMP Application Process and Practice Exam (Microsoft)
+                    </br>
+                        &emsp; • &ensp; Project Manager Engagement with Stakeholders (Microsoft)
+                    </br>
+                        &emsp; • &ensp; Project Execution: Running the Project (Google)
+                        </br>
+                        &emsp; • &ensp; The Bits and Bytes of Computer Networking (Google)
+                        </br>
+                        &emsp; • &ensp; PMP Formula (Microsoft)</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>

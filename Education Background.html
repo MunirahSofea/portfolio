@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+  <title>Working Experience</title>
+
+  <script>
+    function openTab(evt, tabContent) {
+    var i, tabCon, tab;
+
+    tabCon = document.getElementsByClassName("tabCon");
+    for (i = 0; i < tabCon.length; i++) {
+        tabCon[i].style.display = "none";
+    }
+
+    tab = document.getElementsByClassName("tab");
+    for (i = 0; i < tab.length; i++) {
+        tab[i].className = tab[i].className.replace(" active", "");
+    }
+
+    document.getElementById(tabContent).style.display = "block";
+    evt.currentTarget.className += " active";
+    }
+
+    function setDefaultTab() {
+    document.getElementById("Overview").style.display = "block";
+    const defaultTab = document.querySelector(".tab");
+    if (defaultTab) {
+        defaultTab.className += " active";
+    }
+    }
+
+    window.onload = setDefaultTab;
+
+</script>
+
+  <style>
+
+    body,html{
+        background: linear-gradient(to right, rgb(214, 191, 18) 0%, rgb(237, 137, 30) 100%);
+    }
+
+    .container{
+        display: flex; 
+        gap: 30px;
+        justify-content: space-between; 
+        padding: 20px;
+        max-width: 1200px;
+    }
+
+    .column1{
+        width: 400px;
+    }
+
+    .icon1{
+      width: 300px;
+      margin: 30px 0 0 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(125deg, rgb(190, 201, 229) 0%, rgb(223, 202, 183) 50%, rgb(202, 226, 195) 100%);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+      padding: 10px 0px 10px 0px;
+    }
+
+    .pro1{
+      height: 200px;
+    }
+
+    .tabs button{
+        width: 300px;
+        margin: 30px 0 0 30px;
+        height: 50px;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        font-family: 'Poppins', sans-serif;
+        font-weight: 600;
+        background-color: #f95454;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        padding: 5px 0px 5px 0px;
+        animation-duration: 2s;
+        animation-iteration-count: infinite;
+    }
+
+    .tabs button:hover{
+        background-color: #d72c2c;
+        transform: scale(1.10);
+    }
+
+    .tabs button.active{
+        background-color: #d72c2c;
+    }
+
+    @keyframes bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-50px); }
+    100% { transform: translateY(0); }
+    }
+
+    .column2{
+        width: 1000px;
+    }
+
+    .tabCon{
+        display: none;
+    }
+
+    .box-title{
+        width: 1000px;
+        background-color: #f95454;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+        padding: 5px 0px 5px 30px;
+        margin: 30px 0 0 30px;
+        box-sizing: border-box;
+    }
+
+    .content{
+        width: 1000px;
+        height: 495px;
+        background-color: #FFC6C6;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+        padding: 30px 70px 30px 40px;
+        margin: 35px 0 0 30px;
+        box-sizing: border-box;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+    
+    h1{
+        font-size: 28px;
+        font-family:'Poppins', sans-serif;
+    }
+
+    h2{
+        font-size: 25px;
+        font-family:'Poppins', sans-serif;
+    }
+
+    h3{
+        font-size: 18px;
+        font-weight: 600;
+        font-family:'Poppins', sans-serif;
+        margin-bottom: -20px;
+        color: #481010;
+        text-align: justify;
+    }
+
+    h4{
+        font-size: 16px;
+        font-weight: 400;
+        font-family:'Poppins', sans-serif;
+        color: #481010;
+        text-align: justify;
+        margin-bottom: 18px;
+    }
+
+
+  </style>
+
+</head>
+<body>
+    <div class="container">
+        <div class="column1">
+            <div class="icon1">
+                <img src="https://raw.githubusercontent.com/MarliyanaSuraya/Marli-s-Portfolio/refs/heads/main/assets/pro1.png" class="pro1">
+                <h1>Working Experience</h1>
+            </div>
+            <div class="tabs">
+                <button class="tab" onclick="openTab(event, 'Product Specialist')" data-title="Product Specialist">Product Specialist</button>
+                <button class="tab" onclick="openTab(event, 'Assistant Manager')" data-title="Assistant Manager">Assistant Manager</button>
+                <button class="tab" onclick="openTab(event, 'Tuition Tutor')" data-title="Tuition Tutor">Tuition Tutor</button>
+                <button class="tab" onclick="openTab(event, 'Demo')" data-title="Demo">Demo</button>
+            </div>
+        </div>
+
+        <div class="column2">
+            <div id="Product Specialist" class="tabCon">
+                <div class="box-title">
+                    <h2>Product Specialist</h2>
+                </div>
+                <div class="content">
+                    <h3>Sales </h3>
+                    <h4>&emsp; • &ensp; In-charge of UKM, UM, UiTM and government e-perolehan / tender.
+                    </br>
+                        &emsp; • &ensp; 
+                    </br>
+                        &emsp; • &ensp; Data is static and not interactive.</h4>
+                    </h4>
+                    <h3> Technical </h3>
+                    <h4>&emsp; • &ensp; Product commissioning to customer.
+                    </br>
+                        &emsp; • &ensp; Checking and fix troubleshooting of customer's product.
+                    </br>
+                        &emsp; • &ensp; Handling the maintenance and quality checking of the product.</h4>
+                    <h3>Objective </h3>
+                    <h4>&emsp; • &ensp; To give users a platform to monitor population changes in varying countries.
+                    </br>
+                        &emsp; • &ensp; To determine how the nation's fertility rates, mortality rates and migration patterns to its population size.
+                    </br>
+                        &emsp; • &ensp; To visualize the data in an interactive way.</h4>
+                </div>
+            </div>
+            <div id="Assistant Manager" class="tabCon">
+                <div class="box-title">
+                    <h2>Assistant Manager</h2>
+                </div>
+                <div class="content">
+                    <h3> Index Page </h3>
+                    <h4>&emsp; • &ensp; Line Charts.
+                    </br>
+                        &emsp; • &ensp; Choropleth Maps.
+                    </br>
+                        &emsp; • &ensp; Scatter Charts</h4>
+                    <h3>Visualization Page</h3>
+                    <h4>&emsp; • &ensp; Line Charts.
+                    </br>
+                        &emsp; • &ensp; Choropleth Maps.
+                    </br>
+                        &emsp; • &ensp; Scatter Charts</h4>
+                    <h3>Analysis Page</h3>
+                    <h4>&emsp; • &ensp; Population Growth Rate Analysis:
+                    </br>
+                        &emsp; &emsp; &emsp; Displays the population growth rate for each selected country.
+                    </br>
+                        &emsp; • &ensp; Factor Correlation:
+                        </br>
+                        &emsp; &emsp; &emsp; Shows how various factors like fertility rate, death rate, and migration trends correlate with population 
+                        </br>
+                        &emsp; &emsp; &emsp; growth for the selected countries.</h4>
+                </div>
+            </div>
+            <div id="Tuition Teacher" class="tabCon">
+                <div class="box-title">
+                    <h2>Methodologies</h2>
+                </div>
+                <div class="content">
+                    <h4>1. Data Collection and Preparation:
+                        Data Source Identification: Collect demographic data from reliable sources such as government databases, the United Nations, or World Bank.
+                        Data Cleaning: Preprocess the raw data to remove any inconsistencies, missing values, or errors.
+                        Data Transformation: Format the data into a structure suitable for analysis (e.g., time-series data for population trends, country-wise statistics for various factors).
+                        2. Data Analysis:
+                        Exploratory Data Analysis (EDA): Use statistical tools to understand the distribution, trends, and relationships within the data, focusing on migration trends, fertility rates, mortality rates, and population growth.
+                        Correlation Analysis: Identify and analyze the correlation between factors (fertility rate, death rate, migration trends) and population growth using correlation coefficients and regression analysis.
+                        Machine Learning (Optional): Apply machine learning algorithms (e.g., regression models) to predict future population growth based on historical data.
+                        3. Data Visualization:
+                        Interactive Dashboards: Develop interactive visualizations using libraries like Plotly, D3.js, or Matplotlib in Python to showcase data in line charts, choropleth maps, and scatter plots.
+                        Choropleth Maps: Use GeoPandas or Leaflet to create geographic maps that visualize demographic trends by region.
+                        Line and Scatter Charts: Utilize libraries like Plotly or Matplotlib to create time-series visualizations and scatter plots for key demographic factors.
+                        4. Website Development:
+                        Backend Development: Use Flask to set up the backend and handle data requests, country selection, and data processing.
+                        Frontend Development: Design the user interface using HTML, CSS, and JavaScript to ensure the site is interactive, user-friendly, and displays visualizations effectively.
+                        Integration of Visualizations: Embed the charts, maps, and analysis into the web interface to provide users with an interactive experience.
+                        5. Validation and Evaluation:
+                        Cross-Validation of Predictions (if using machine learning): If machine learning models are used, validate their accuracy using techniques like cross-validation or holdout validation.
+                        User Testing: Conduct testing with a sample group of users to ensure the website is intuitive, the visualizations are clear, and the analysis is accurate.
+                        6. Documentation and Reporting:
+                        Write Reports: Document the entire process, including data sources, methodologies used, results from data analysis, and design decisions for the website.
+                        Final Presentation: Prepare a presentation summarizing the project’s objectives, methodology, findings, and visualizations.</h4>>
+                </div>
+            </div>
+            <div id="Demo" class="tabCon">
+                <div class="box-title">
+                    <h2>Demo</h2>
+                </div>
+                <div class="content">
+                    <h4> videos or link</h4>>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+</html>

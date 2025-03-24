@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <title>Projects</title>
+
+  <script>
+    function openTab(evt, tabContent) {
+      var i, tabCon, tab;
+      tabCon = document.getElementsByClassName("tabCon");
+      for (i = 0; i < tabCon.length; i++) {
+        tabCon[i].style.display = "none";
+      }
+      tab = document.getElementsByClassName("tab");
+      for (i = 0; i < tab.length; i++) {
+        tab[i].className = tab[i].className.replace(" active", "");
+      }
+      document.getElementById(tabContent).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+
+    function setDefaultTab() {
+      document.getElementById("Website").style.display = "block";
+      const defaultTab = document.querySelector(".tab");
+      if (defaultTab) {
+        defaultTab.className += " active";
+      }
+    }
+
+    window.onload = setDefaultTab;
+  </script>
+
+  <style>
+    /* Background */
+    body, html {
+      background: linear-gradient(to right, rgb(214, 191, 18) 0%, rgb(237, 137, 30) 100%);
+    }
+
+    .container {
+      display: flex;
+      gap: 30px;
+      justify-content: space-between;
+      padding: 20px;
+      max-width: 1200px;
+    }
+
+    .column1 {
+      width: 400px;
+    }
+
+    .icon1 {
+      width: 300px;
+      margin: 30px 0 0 30px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(125deg, rgb(190, 201, 229) 0%, rgb(223, 202, 183) 50%, rgb(202, 226, 195) 100%);
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+      padding: 10px 0;
+    }
+
+    .pro1 {
+      height: 200px;
+    }
+
+    h3{
+        font-size: 15px;
+        font-weight: 600;
+        font-family:'Poppins', sans-serif;
+        margin-bottom: -20px;
+        color: #481010;
+        text-align: justify;
+    }
+
+    .tabs button {
+      width: 300px;
+      margin: 30px 0 0 30px;
+      height: 50px;
+      border: none;
+      outline: none;
+      font-size: 18px;
+      font-family: 'Poppins', sans-serif;
+      font-weight: 600;
+      background-color: #d5af87;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+      border-radius: 15px;
+      padding: 5px 0;
+      cursor: pointer;
+    }
+
+    .tabs button:hover, .tabs button.active {
+      background-color: #d49947;
+      transform: scale(1.10);
+    }
+
+    .column2 {
+      width: 1000px;
+    }
+
+    .tabCon {
+      display: none;
+    }
+
+    .box-title {
+      width: 100%;
+      background-color: #e2871e;
+      box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+      border-radius: 15px;
+      padding: 5px 0 5px 30px;
+      margin: 30px 0;
+      box-sizing: border-box;
+      color: white;
+    }
+
+    .content{
+        width: 800px;
+        height: 495px;
+        background-color: #f9d860;
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+        border-radius: 15px;
+        padding: 30px 70px 30px 40px;
+        margin: 35px 0 0 30px;
+        box-sizing: border-box;
+        overflow-y: auto;
+        overflow-x: hidden;
+    }
+
+    /* Moving Text */
+    #moving-text-container {
+      width: 100%;
+      overflow: hidden;
+      white-space: nowrap;
+      position: relative;
+      padding: 10px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    #moving-text {
+      display: inline-block;
+      font-size: 20px;
+      font-weight: bold;
+      color: black;
+      white-space: nowrap;
+      animation: moveText 15s linear infinite;
+    }
+
+    @keyframes moveText {
+      from {
+        transform: translateX(100%);
+      }
+      to {
+        transform: translateX(-100%);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="column1">
+      <div class="icon1">
+        <img src="https://raw.githubusercontent.com/MarliyanaSuraya/Marli-s-Portfolio/refs/heads/main/assets/pro1.png" class="pro1">
+        <h1>Projects</h1>
+      </div>
+      <div class="tabs">
+        <button class="tab" onclick="openTab(event, 'Website')">Website</button>
+        <button class="tab" onclick="openTab(event, 'Dashboard')">Dashboard</button>
+        <button class="tab" onclick="openTab(event, 'Video')">Video</button>
+        <button class="tab" onclick="openTab(event, 'Presentations')">Presentations</button>
+      </div>
+    </div>
+
+    <div class="column2">
+      <div id="Website" class="tabCon">
+        <div class="box-title">
+          <h2>Website</h2>
+        </div>
+        <div class="content">
+          <h3>This website shows the line, scatter and growth trend of import products from various countries to Malaysia. It displays detailed charts, including line graphs that illustrate the fluctuations in import volumes over time, scatter plots that show the correlation between different product categories and their countries of origin, and growth trend graphs that highlight the overall increase or decrease in imports across different years. These visualizations help users analyze the patterns, identify key trading partners, and understand the dynamics of Malaysia's import activities.
+            This version adds more context about what the website offers and what users can gain from interacting with the data.</h3>
+          </br>
+            <h4>This is just a minor project to improve and consolidate my python and JavaScript skills, due to free live website maker, the website need a high speed wifi and it might take a long time.</h4>
+          <a href="https://non-malaysia-products.onrender.com">Visit Website</a>
+        </br>
+          <h8>If the website cannot be open, please copy paste this link and try:</h8>
+          <h8>"https://non-malaysia-products.onrender.com"</h8> 
+          <h3>Related Skills</h3>
+          </br>
+          <div id="moving-text-container">
+            <div id="moving-text">Python &bull; Javascript &bull; CSS &bull; GitHub &bull; Microsoft Excel &bull; create free live website &bull; Power BI &bull; data mining &bull; data sourcing &bull; onrender</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="Dashboard" class="tabCon">
+        <div class="box-title">
+          <h2>Dashboard</h2>
+        </div>
+        <div class="content">
+          <h3>The dashboard offers a comprehensive overview of sports product sales across different countries and categories. It provides an interactive platform where users can explore detailed insights into the performance of various sports-related products in the global market.
+            Key features of the dashboard include:
+          </br>
+            &emsp; • &ensp; Sales by Country: Bar chart visualizing the total sales figures of sports products in different countries that allows users to compare which countries have the highest or lowest sales.
+          </br>
+            &emsp; • &ensp;Sales by Category: A breakdown of sales data by product category. Users can view how different categories perform in terms of sales volume and profit.
+          </br>
+            &emsp; • &ensp;Filter Options: Users can filter data by specific timeframes, regions, or product types, making the dashboard customizable to their needs.</h3>
+          </br>
+          <h4>These dashboards are what I usually use to present my sales trend when I am a Product Specialist. Currently, these dashboards are used to report an do presentation on any trend and ongoing issues for training</h4>
+          <a href="https://docs.google.com/spreadsheets/d/16L6xH6ix9Ym0nZ7iAr03uexfr24o14PR/edit?usp=drive_link&ouid=102601727905815090548&rtpof=true&sd=true">View Dashboard</a>
+          <h3>Related Skills</h3>
+        </br>
+          <div id="moving-text-container">
+            <div id="moving-text">Microsoft Excel &bull; Data mining</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="Video" class="tabCon">
+        <div class="box-title">
+          <h2>Video</h2></div>
+        <div class="content">
+          <h3>This is an example of simulation video I did back in my degree year for Criminal Law subject. It helps audience to understand better regarding the case instead of reading the whole case study. The video is about Consent under Section 87 and 88 of Penal Code</h3>
+        </br>
+          <h4>This skill is invaluable during presentations, particularly when showcasing products to clients. It enhances their understanding by clearly demonstrating when and how each item is used, ensuring they grasp the full value and purpose of the products.</h4>
+          <a href="https://drive.google.com/file/d/1TTXLwvT9yiydvuCK69v4YJgPW7uEIH9g/view?usp=drive_link">Visit Video</a>
+          <h3>Related Skills</h3>
+        </br>
+          <div id="moving-text-container">
+            <div id="moving-text">Animation &bull; Voice Over &bull; Filmora &bull; Image editing &bull; AutoCad</div>
+          </div>
+        </div>
+      </div>
+
+      <div id="Presentations" class="tabCon">
+        <div class="box-title">
+          <h2>Presentations</h2></div>
+        <div class="content">
+          <h4>This is just one example of a slide presentation; all other work-related presentations are confidential. I typically include AutoCAD drawings in the slides to highlight the product components and provide a clearer visual representation.</h4>
+          <a href="https://prezi.com/view/CfzE8BIgywHLrmLwfYbS/">View Presentation</a>
+          <h3>Related Skills</h3>
+          </br>
+          <div id="moving-text-container">
+            <div id="moving-text">Prezi &bull; Canva &bull; Law &bull; Microsoft PowerPoint &bull; Power BI</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
